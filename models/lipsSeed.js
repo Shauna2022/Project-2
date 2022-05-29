@@ -1,23 +1,23 @@
 module.exports = [
     {
-      name: 'Better Than Sex Mascara',
-      brand: 'Too faced',
-      price: 27,
-      color: 'black'
+      name: 'Gloss Bomb Bomb Universal Lip Luminizer',
+      brand: 'Fenty Beauty',
+      price: 20,
+      color: 'Fenty Glow'
     }, {
-      name: 'Voluminous Lash Paradise Mascara',
-      brand: "L'Oreal",
-      price: 11.99,
-      color: 'black'
+      name: 'Ultra Glossy Lip',
+      brand: "ColourPOP",
+      price: 5.60,
+      color: 'Champagne Mami'
     }, {
-      name: 'Bins',
-      brand: 'A stack of colorful bins for your beans and bones.',
-      price: 7000,
-      color: 1
+      name: 'Silky Satin Lip Colour',
+      brand: 'Christan Louboutin',
+      price: 90,
+      color: 'MISS LOUBI'
     },{
-      name: '',
-      brand: '',
-      price: ,
-      color: ''
+      name: 'Super Lustrous Lipsitck',
+      brand: 'Revlon',
+      price: 9.49,
+      color: 'Fire and Ice (720)'
     },
 ]

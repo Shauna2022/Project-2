@@ -16,7 +16,7 @@ module.exports = [
       color: 'shimmer finish'
     },{
       name: 'Califoria Love',
-      brand: 'ColourPop',
+      brand: 'ColourPOP',
       price: 12.60,
       color: 'Gold and Bronze shimmer finish'
     },
