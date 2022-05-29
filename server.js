@@ -33,3 +33,5 @@ app.use('/product', productController)
 app.listen(3000, () =>{
     console.log('Express is listening...')
 })
+
+module.exports = app
