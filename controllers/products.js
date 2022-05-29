@@ -5,7 +5,7 @@ const express = require('express');
 const res = require('express/lib/response');
 const router = express.Router()
 const Product = require('../models/product')
-
+const productsSeed = require('../models/productsSeed.js');
 ////////////////////////////////////////////////////////////
 //                      MIDDLEWARE
 ////////////////////////////////////////////////////////////
@@ -13,10 +13,17 @@ router.use(express.urlencoded({ extended: false }));
 ////////////////////////////////////////////////////////////
 //                      ROUTES
 ////////////////////////////////////////////////////////////
+////////////////////////SEED////////////////////////
+router.get('/seed', (req, res) => {
+	Product.deleteMany({}, (error, allProducts) => { });
+	Product.create(productsSeed, (error, data) => {
+		res.redirect('/store');
+	});
+});
 ////////////////////////INDEX ////////////////////////
 router.get('/', (req, res) => {
     Product.find({}, (err, allProducts) => {
-        res.render('index,ejs', {
+        res.render('dupe/index,ejs', {
             product: allProducts
         })
     })
