@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lips Edit</title>
 </head>
 <body>
-    
+    <h1>Price Change?</h1>
+    <form action="/dupe/<%= product._id %>?_method=PUT" method="POST">
+        <input type="text" name="price" value="<%= product.price %>" /><br />
+        <input type="submit" value="Update Author" />
+    </form>
+    <form action="/dupe/<%= product._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE" />
+    </form>
 </body>
 </html>

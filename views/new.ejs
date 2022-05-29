@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>New Dupe?</h1>
+    <form action="/dupe/<%= product._id %>?_method=PUT" method="POST">
+        <input type="text" name="name" value="<%= product.name %>" /><br />
+        <input type="text" name="brand" value="<%= product.brand %>" /><br />
+        <input type="text" name="price" value="<%= product.price %>" /><br />
+        <input type="text" name="color" value="<%= product.color %>" /><br />
+        <input type="submit" value="Update Author" />
+    </form>
 </body>
 </html>
