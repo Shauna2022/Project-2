@@ -1,23 +1,23 @@
 module.exports = [
     {
-      name: 'Better Than Sex Mascara',
-      brand: 'Too faced',
-      price: 27,
-      color: 'black'
+      name: "Pro Filt'r Soft Matte Longwear Liquid Foundation",
+      brand: 'Fenty Beauty',
+      price: 38,
+      color: '50 shades'
     }, {
-      name: 'Voluminous Lash Paradise Mascara',
-      brand: "L'Oreal",
-      price: 11.99,
-      color: 'black'
+      name: 'Fit Me Matte + Poreless Liquid Foundation',
+      brand: "MAYBELLINE",
+      price: 8.49,
+      color: '40'
     }, {
-      name: 'Bins',
-      brand: 'A stack of colorful bins for your beans and bones.',
-      price: 7000,
-      color: 1
+      name: 'Translucent Loose Setting Powder',
+      brand: 'Laura Mercier',
+      price: 39,
+      color: 'translucent'
     },{
-      name: '',
-      brand: '',
-      price: ,
-      color: ''
+      name: 'Pro Setting Powder',
+      brand: 'L.A. Girl',
+      price: 5.99,
+      color: 'translucent'
     },
 ]
