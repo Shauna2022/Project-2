@@ -7,6 +7,7 @@ const app = express()
 require('dotenv').config()
 const mongoose = require('mongoose')
 const productController = require('./controllers/products')
+const product = require('./models/product')
 ////////////////////////////////////////////////////////////
 //                      SET UP DATEBASE
 ////////////////////////////////////////////////////////////

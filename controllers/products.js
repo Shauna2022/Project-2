@@ -4,8 +4,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const router = express.Router()
-const Product = require('../models/product')
-const productsSeed = require('../models/productsSeed.js');
+const products = require('../models/product.js');
 ////////////////////////////////////////////////////////////
 //                      MIDDLEWARE
 ////////////////////////////////////////////////////////////
