@@ -23,7 +23,7 @@ router.get('/seed', (req, res) => {
 ////////////////////////INDEX ////////////////////////
 router.get('/', (req, res) => {
     Product.find({}, (err, allProducts) => {
-        res.render('dupe/index,ejs', {
+        res.render('index,ejs', {
             product: allProducts
         })
     })
