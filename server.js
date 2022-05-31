@@ -7,6 +7,9 @@ const app = express()
 require('dotenv').config()
 const mongoose = require('mongoose')
 const productController = require('./controllers/products')
+const complextionController = require('./controllers/productRoutes/complextion')
+const eyesController = require('./controllers/productRoutes/eyes')
+const lipsController = require('./controllers/productRoutes/lips')
 const product = require('./models/product')
 ////////////////////////////////////////////////////////////
 //                      SET UP DATEBASE
@@ -26,7 +29,11 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 ////////////////////////////////////////////////////////////
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
 app.use('/product', productController)
+app.use('/complextion', complextionController)
+app.use('/eyes', eyesController)
+app.use('/lips', lipsController)
 ////////////////////////////////////////////////////////////
 //                      ROUTES
 ////////////////////////////////////////////////////////////
