@@ -23,7 +23,7 @@ router.get('/seed', (req, res) => {
 //////////////////////// SHOW ////////////////////////////
 router.get('/:id', (req, res) =>{
     Product.findById(req.params.id, (error, foundProduct) =>{
-        res.render('show.ejs', {
+        res.render('lips/show.ejs', {
             product: foundProduct,
         })
     })

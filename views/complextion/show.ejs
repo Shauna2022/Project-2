@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- import css file -->
+    
 </head>
 <body>
     <section>
         <h2>Author Attributes:</h2>
         <ul>
-            <li>Name: <%= author.name %></li>
+            <li>Name: <%= product.name %></li>
         </ul> 
-                <form action="/authors/<%= author._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete Author" />
+                <form action="/dupe/<%= author._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE" />
         </form>
-        <a href="/authors/<%= author._id %>/edit">Edit</a>
+        <a href="/dupe/<%= product._id %>/edit">Edit</a>
     </section>
 </body>
 </html>
