@@ -16,7 +16,7 @@ router.use(express.urlencoded({ extended: false }));
 router.get('/seed', (req, res) => {
 	Product.deleteMany({}, (error, allProducts) => { });
 	Product.create(productsSeed, (error, data) => {
-		res.redirect('/store');
+		res.redirect('/dupe');
 	});
 });
 ////////////////////////INDEX ////////////////////////
