@@ -9,12 +9,7 @@
 <body>
     <h1>New Dupe?</h1>
     
-    <label>part of face</label>
-    <select>
-      <option>Complextion</option>
-      <option>Eyes</option>
-      <option>Lips</option>
-    </select>
+
 
     <form action="/dupe/<%= product._id %>?_method=PUT" method="POST">
         <input type="text" name="name" value="<%= product.name %>" /><br />

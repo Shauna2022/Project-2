@@ -35,7 +35,7 @@ router.put('/:id', (req, res) => {
     Product.findByIdAndUpdate(req.params.id, req.body,{
         new: true
     }, (error, updatedProduct) => {
-        res.redirect('/duped/:id')
+        res.redirect('/dupe/:id')
     })
 })
 

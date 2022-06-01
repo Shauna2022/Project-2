@@ -16,17 +16,17 @@ router.use(express.urlencoded({ extended: false }));
 router.get('/seed', (req, res) => {
 	Product.deleteMany({}, (error, allProducts) => { });
 	Product.create(productsSeed, (error, data) => {
-		res.redirect('/dupe');
+		res.redirect('/dupe/complextion');
 	});
 });
 //////////////////////// NEW ////////////////////////
 router.get('/new', (req, res) => {
-    res.render('complextion/new.ejs')
+    res.render('/dupe/complextion/new.ejs')
 })
 //////////////////////// DELETE ////////////////////////
 router.delete('/:id', (req, res) => {
     Product.findByIdAndDelete(req.params.id, (error, data) => {
-        res.redirect('/duped/:id')
+        res.redirect('/dupe/complextion/:id')
     })
 })
 
@@ -35,14 +35,14 @@ router.put('/:id', (req, res) => {
     Product.findByIdAndUpdate(req.params.id, req.body,{
         new: true
     }, (error, updatedProduct) => {
-        res.redirect('/duped/:id')
+        res.redirect('/dupe/complextion/:id')
     })
 })
 
 //////////////////////// CREATE ////////////////////////
 router.post('/', (req, res) => {
     Product.create(req.body, (error, createdProduct) => {
-        res.redirect('/duped')
+        res.redirect('/dupe/complextion')
     })
 })
 
