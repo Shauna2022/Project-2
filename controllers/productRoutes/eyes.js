@@ -14,8 +14,8 @@ router.use(express.urlencoded({ extended: false }));
 ////////////////////////////////////////////////////////////
 ////////////////////////SEED////////////////////////
 router.get('/seed', (req, res) => {
-	Product.deleteMany({}, (error, allProducts) => { });
-	Product.create(productsSeed, (error, data) => {
+	Eyes.deleteMany({}, (error, allEyes) => { });
+	Eyes.create(eyesSeed, (error, data) => {
 		res.redirect('/dupe');
 	});
 });
@@ -25,41 +25,41 @@ router.get('/new', (req, res) => {
 })
 //////////////////////// DELETE ////////////////////////
 router.delete('/:id', (req, res) => {
-    Product.findByIdAndDelete(req.params.id, (error, data) => {
+    Eyes.findByIdAndDelete(req.params.id, (error, data) => {
         res.redirect('/duped/:id')
     })
 })
 
 //////////////////////// UPDATE ////////////////////////
 router.put('/:id', (req, res) => {
-    Product.findByIdAndUpdate(req.params.id, req.body,{
+   Eyes.findByIdAndUpdate(req.params.id, req.body,{
         new: true
-    }, (error, updatedProduct) => {
+    }, (error, updatedEyes) => {
         res.redirect('/dupe/:id')
     })
 })
 
 //////////////////////// CREATE ////////////////////////
 router.post('/', (req, res) => {
-    Product.create(req.body, (error, createdProduct) => {
+    Eyes.create(req.body, (error, createdEyes) => {
         res.redirect('/duped')
     })
 })
 
 //////////////////////// EDIT ////////////////////////
 router.get('/:id/edit', (req, res) => {
-    Product.findById(req.params.id, (error, foundProduct) =>{
+    Eyes.findById(req.params.id, (error, foundEyes) =>{
         res.render('edit.ejs', {
-            product: foundProduct
+            eyes: foundEyes
         })
     })
 })
 
 //////////////////////// SHOW ////////////////////////////
 router.get('/:id', (req, res) =>{
-    Product.findById(req.params.id, (error, foundProduct) =>{
+    Eyes.findById(req.params.id, (error, foundEyes) =>{
         res.render('eyes/show.ejs', {
-            product: foundProduct,
+            eyes: foundEyes,
         })
     })
 })

@@ -1,4 +1,4 @@
- var lips = [
+ var Lips = [
     {
       name: 'Gloss Bomb Bomb Universal Lip Luminizer',
       brand: 'Fenty Beauty',
@@ -22,4 +22,4 @@
     },
 ]
 
-module.exports = lips
+module.exports = Lips
