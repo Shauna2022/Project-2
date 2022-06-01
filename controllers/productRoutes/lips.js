@@ -20,6 +20,11 @@ router.get('/seed', (req, res) => {
 		res.redirect('/dupe');
 	});
 });
+//////////////////////// NEW ////////////////////////
+router.get('/new', (req, res) => {
+    res.render('lips/new.ejs')
+})
+
 //////////////////////// DELETE ////////////////////////
 router.delete('/:id', (req, res) => {
     Lips.findByIdAndDelete(req.params.id, (error, data) => {
@@ -52,10 +57,6 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
-//////////////////////// NEW ////////////////////////
-router.get('/new', (req, res) => {
-    res.render('lips/new.ejs')
-})
 
 //////////////////////// SHOW ////////////////////////////
 router.get('/:id', (req, res) =>{
