@@ -11,7 +11,13 @@
     
     <h2>Lips</h2>
     
-    <a href="complextion/new">New Dupe? Click here!</a>
-    
+    <a href="lips/new">New Dupe? Click here!</a>
+
+    <% for (let i = 0; i < lips.length; i++ ) { %>
+           <a href="/snacks/<%= lips[i]._id %> "><%= lips[i].length %> </a>
+       
+           <% } %>
+
+
 </body>
 </html>

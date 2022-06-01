@@ -12,5 +12,10 @@
         
         <a href="complextion/new">New Dupe? Click here!</a>
        
+        <% for (let i = 0; i <complextion.length; i++ ) { %>
+               <a href="/complextion/<%= complextion[i]._id %> "><%= complextion[i].name %> </a>
+           <% } %>
+    
+    
 </body>
 </html>

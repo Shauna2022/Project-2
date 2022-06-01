@@ -10,6 +10,12 @@
  
         <h2>Eyes</h2>
         
-        <a href="complextion/new">New Dupe? Click here!</a>
+        <a href="eyes/new">New Dupe? Click here!</a>
+
+        <% for (let i = 0; i < eyes.length; i++ ) { %>
+               <a href="/eyes/<%= eyes[i]._id %> "><%= eyes[i].lenght%> </a>
+           <% } %>
+    
+    
 </body>
 </html>

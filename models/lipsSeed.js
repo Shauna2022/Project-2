@@ -1,4 +1,4 @@
-module.exports = [
+ var lips = [
     {
       name: 'Gloss Bomb Bomb Universal Lip Luminizer',
       brand: 'Fenty Beauty',
@@ -21,3 +21,5 @@ module.exports = [
       color: 'Fire and Ice (720)'
     },
 ]
+
+module.exports = lips

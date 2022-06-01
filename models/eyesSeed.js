@@ -1,4 +1,4 @@
-module.exports = [
+var eyes = [
     {
       name: 'Better Than Sex Mascara',
       brand: 'Too faced',
@@ -22,3 +22,4 @@ module.exports = [
     },
 ]
 
+module.exports = eyes

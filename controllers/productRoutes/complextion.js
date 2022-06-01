@@ -5,7 +5,9 @@ const express = require('express');
 const res = require('express/lib/response');
 const router = express.Router()
 const Product = require('../../models/product');
-////////////////////////////////////////////////////////////
+const complextionSeed = require('../../models/complextionSeed');
+const Complextion = require('../../models/complextionSeed');
+//////////////////////////snacks//////////////////////////////////
 //                      MIDDLEWARE
 ////////////////////////////////////////////////////////////
 router.use(express.urlencoded({ extended: false }));
@@ -14,9 +16,9 @@ router.use(express.urlencoded({ extended: false }));
 ////////////////////////////////////////////////////////////
 ////////////////////////SEED////////////////////////
 router.get('/seed', (req, res) => {
-	Product.deleteMany({}, (error, allProducts) => { });
-	Product.create(productsSeed, (error, data) => {
-		res.redirect('/dupe/complextion');
+    Complextion.create(complextionsSeed, (error, data) => {
+    Complextion.deleteMany({}, (error, allComplextion) => { });
+    res.redirect('/dupe/complextion');
 	});
 });
 //////////////////////// NEW ////////////////////////
@@ -25,41 +27,41 @@ router.get('/new', (req, res) => {
 })
 //////////////////////// DELETE ////////////////////////
 router.delete('/:id', (req, res) => {
-    Product.findByIdAndDelete(req.params.id, (error, data) => {
+    Complextion.findByIdAndDelete(req.params.id, (error, data) => {
         res.redirect('/dupe/complextion/:id')
     })
 })
 
 //////////////////////// UPDATE ////////////////////////
 router.put('/:id', (req, res) => {
-    Product.findByIdAndUpdate(req.params.id, req.body,{
+    Complextion.findByIdAndUpdate(req.params.id, req.body,{
         new: true
-    }, (error, updatedProduct) => {
+    }, (error, updatedComplextion) => {
         res.redirect('/dupe/complextion/:id')
     })
 })
 
 //////////////////////// CREATE ////////////////////////
 router.post('/', (req, res) => {
-    Product.create(req.body, (error, createdProduct) => {
+    Complextion.create(req.body, (error, createdComplextion) => {
         res.redirect('/dupe/complextion')
     })
 })
 
 //////////////////////// EDIT ////////////////////////
 router.get('/:id/edit', (req, res) => {
-    Product.findById(req.params.id, (error, foundProduct) =>{
+    Complextion.findById(req.params.id, (error, foundComplexion) =>{
         res.render('edit.ejs', {
-            product: foundProduct
+            complextion: foundComplexion
         })
     })
 })
 
 //////////////////////// SHOW ////////////////////////////
 router.get('/:id', (req, res) =>{
-    Product.findById(req.params.id, (error, foundProduct) =>{
+    Complextion.findById(req.params.id, (error, foundComplexion) =>{
         res.render('complextion/show.ejs', {
-            product: foundProduct,
+            complexion:foundComplexion,
         })
     })
 })

@@ -1,4 +1,4 @@
-module.exports = [
+var Complextion = [
     {
       name: "Pro Filt'r Soft Matte Longwear Liquid Foundation",
       brand: 'Fenty Beauty',
@@ -21,3 +21,5 @@ module.exports = [
       color: 'translucent'
     },
 ]
+
+module.exports = Complextion
