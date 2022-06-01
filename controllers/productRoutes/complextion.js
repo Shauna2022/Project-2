@@ -58,8 +58,8 @@ router.get('/:id/edit', (req, res) => {
 })
 
 //////////////////////// SHOW ////////////////////////////
-router.get('/:id', (req, res) =>{
-    Complextion.findById(req.params.id, (error, foundComplexion) =>{
+router.get('/complextion', (req, res) =>{
+    Complextion.find({},(error, foundComplexion) =>{
         res.render('complextion/show.ejs', {
             complexion:foundComplexion,
         })
